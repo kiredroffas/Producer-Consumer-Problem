@@ -18,3 +18,5 @@
 * Print statements related to produced and consumed items are printed as each producer and consumer completes an action. 
 * Additionally, deffered cancellation is implemented for the producer and consumer threads through a signal handler overriding Ctrl-c (SIGINT), which sets a global variable telling the threads to exit. Making it so instead of waiting for the entire sleep time before terminating the threads, the threads can be terminated in a deffered way at any time during runtime by entering Ctrl-c. The deffered thread cancellation is done through the use of 'pthread_cancel()' and 'pthread_join()' functions.
 * All pthread/semaphore/command line operations have error checks implemented to properly handle any major errors. Upon an error, a descriptive error message will be printed to stderr.
+## Screenshot
+![Alt text](/screenshot/sc.png?raw=true "sc")
