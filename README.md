@@ -1,4 +1,6 @@
 # Producer-Consumer-Problem
+* The Producer-Consumer problem is as follows: 
+    * We have a buffer of fixed size. A producer can produce an item and can place it in the buffer. A consumer can pick items from the buffer and can consume them. We need to ensure that when a producer is placing an item in the buffer, then at the same time consumer should not consume any item. In this problem, the buffer is the critical section.
 * This program implements the Producer-Consumer problem in C using process semaphores and a thread mutex. 
 * Standard counting semaphores are used for 'empty' and 'full', and a mutex lock is used to represent 'mutex'. The producer and consumer (running as separate threads) move items to and from a buffer that is synchronized with the 'empty', 'full', and 'mutex' structures. This is done through the use of Linux Pthreads.
 * The buffer consists of a fixed-size array of type 'bufferItem', which is defined using a typedef. The array of 'bufferItem' objects are manipulated as a stack. The buffer is manipulated through two functions: 'insertItem()' and 'removeItem(), which are called by the producer and consumer threads. The 'insertItem()' and 'removeItem()' functions are synchronized through the process semaphores and thread mutex, which are initialized before the threads are created.
