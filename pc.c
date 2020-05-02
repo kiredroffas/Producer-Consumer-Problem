@@ -158,7 +158,7 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-	/* 1. Get command line arguments argv[1], argv[2], argv[3] */
+    /* 1. Get command line arguments argv[1], argv[2], argv[3] */
 
     char *ptr;
     //Get how long to sleep before terminating
